@@ -1,0 +1,247 @@
+@import "vars";
+@import "global";
+@import "fonts";
+
+//start header
+.header {
+  background-color: #eef1f3;
+}
+.header__inner {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  &-logo {
+    position: relative;
+    font-size: 30px;
+    font-weight: 700;
+    padding-left: 70px;
+    span {
+      color: $blue;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      left: 0;
+      top: -9px;
+      background-image: url("../images/logo.png");
+      text-align: center;
+    }
+  }
+  &-btn {
+    box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
+    margin-left: auto;
+    margin-right: 50px;
+    background-color: $blue;
+    padding: 5px 20px;
+    color: #fff;
+    border-radius: 20px;
+  }
+  &-icons {
+    display: flex;
+  }
+}
+.header__inner-icons {
+  display: flex;
+  padding-right: 50px;
+}
+.header__user {
+  position: relative;
+  padding-left: 72px;
+  display: block;
+  &-avatar {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 0;
+    top: 6px;
+  }
+  &-nickname {
+    font-size: 16px;
+    display: block;
+  }
+  &-cash {
+    span {
+      font-size: 15px;
+      font-weight: 600;
+      color: $blue;
+    }
+  }
+}
+
+//end header
+
+//start header-menu
+.header__menu {
+  padding-top: 20px;
+  height: 80px;
+  background-color: #fff;
+}
+.menu {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  li {
+    & + li {
+      margin-left: 34px;
+    }
+  }
+  &__inner {
+    position: relative;
+  }
+}
+.menu__search-form {
+  width: 360px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  input {
+    font-size: 15px;
+    position: relative;
+    width: 100%;
+    padding: 15px;
+    padding-right: 60px;
+    border-radius: 20px;
+    padding-left: 23px;
+    border: 1px solid #d9dfe5;
+    outline: none;
+    top: -10px;
+    &::placeholder {
+      color: #898f96;
+      font-size: 15px;
+    }
+  }
+  button {
+    background-color: $blue;
+    border: none;
+    width: 70px;
+    border-radius: 20px;
+    height: 49px;
+    position: absolute;
+    right: 0;
+    outline: none;
+    top: -10px;
+    &::before {
+      content: "\e986";
+      font-family: "icomoon";
+      font-size: 15px;
+      color: #fff;
+    }
+  }
+}
+//end header-menu
+
+//start header-menu
+.products {
+  height: 725px;
+  background-color: #294dcf;
+  &__title {
+    text-align: center;
+    color: #fff;
+    font-size: 60px;
+    line-height: 70px;
+    padding-top: 185px;
+    span {
+      font-weight: 700;
+    }
+  }
+  &__text {
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: #fff;
+    padding-top: 37px;
+    margin-bottom: 67px;
+  }
+}
+.products__btns {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 121px;
+}
+.products__btn {
+  font-size: 16px;
+  text-align: center;
+  border: 1px solid #fff;
+  border-radius: 32px;
+  color: #fff;
+  padding: 22px;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #fff;
+    color: $blue;
+  }
+
+  & + .products__btn {
+    margin-left: 30px;
+  }
+}
+//end products
+
+.search {
+  max-width: 1140px;
+  height: 135px;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px 0px rgba(0, 0, 0, 0.08);
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  &::after{
+    content: '';
+    position: absolute;
+    border-radius: 6px;
+    width: 1110px;
+    height: 60px;
+    background-color: #fff;
+    opacity: .5;
+    top: -13px;
+    z-index: -1;
+  }
+  &::before{
+    content: '';
+    position: absolute;
+    border-radius: 6px;
+    width: 1080px;
+    height: 60px;
+    background-color: #fff;
+    opacity: .5;
+    top: -26px;
+    z-index: -1;
+  }
+}
+.search__form {
+  padding-top: 40px;
+  input {
+    margin-right: 30px;
+    padding-left: 30px;
+    border-radius: 6px;
+    width: 808px;
+    height: 55px;
+    border: 1px solid #dcdcdc;
+    outline: none;
+    &::placeholder{
+      font-size: 16px;
+    }
+  }
+  button{
+    outline: none;
+    border-radius: 6px;
+    border: none;
+    color: #fff;
+    background-color: $blue;
+    width: 244px;
+    height: 55px;
+    transition: all 0.3s;
+    &:hover{
+      background-color: #fff;
+      color: $blue;
+      border: 1px solid $blue ;
+    }
+  }
+}
